@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -17,9 +18,9 @@
             <span class="gradient" style="color: orange; font-size: 35px;">YPS</span><h1></h1>
         </div>
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a onclick="a()" href="#">About</a></li>
+            <li><a onclick="s()" href="#">Skills</a></li>
+            <li><a onclick="p()" href="#">Projects</a></li>
         </ul>
 
         <div class="box-icons">
@@ -36,21 +37,19 @@
         <div class="heroinfo autoBlur">
             <div class="heroinfotitle">
                 <i class='bx  bx-diamond-alt'  ></i> 
-                Web Developer Portfolio
+                Web Developer
             </div>
             <h1>Providing <span class="gradient">the best </span>project <span class="gradient">Experience</span></h1>
-            <p>I'm a passionate and detail-oriented Web Developer with a strong foundation in front-end and back-end technologies. I specialize in building responsive, user-centric websites and web applications that are both functional and visually appealing. With experience in modern frameworks like React, Node.js, and Express.js, I bring ideas to life through clean code and intuitive UI/UX design.<br><br>I thrive on solving problems, optimizing performance, and creating seamless user experiences. Whether it's a static landing page or a dynamic full-stack application, I’m dedicated to delivering high-quality digital solutions that meet both client and user needs.</p>
-               <button><i class='bx  bx-send-alt'  ></i>Contact me</button>
+            <p>I'm a passionate and detail-oriented Web Developer with a strong foundation in front-end and back-end technologies. I specialize in building responsive, user-centric websites and web applications that are both functional and visually appealing. With experience in modern frameworks like React, Node.js, and Express.js, I bring ideas to life through clean code.<br><br>I thrive on solving problems, optimizing performance, and creating seamless user experiences. Whether it's a static landing page or a dynamic full-stack application, I’m dedicated to delivering high-quality digital solutions that meet both client and user needs.</p>
+               <button onclick="scrollToContact()"><i class='bx  bx-send-alt'  ></i>Contact me</button>
         </div>
         <div class="herovidbox" style="mix-blend-mode: difference;">
             <video class="autoBlur" autoplay loop muted plays-inline src="videos/hero-video.mp4" type="video/mp4"></video>
         </div>
-        <div class="scrolldown">
-
-        </div>
+            <a onclick="stc()" class="scrolldown" href="#"></a>
     </section>
 
-    <section class="info-sec">
+    <section id="info-sec">
         <h1 class="section-title autoDisplay">
             Hello, There!!
         </h1>
@@ -79,7 +78,7 @@
         </div>
     </section>
 
-    <section class="myproject">
+    <section id="myproject">
         <h1 class="sectiontitle autoDisplay">MY PROJECTS</h1>
         <div class="projectcard">
             <div class="project-vidbox">
@@ -88,18 +87,18 @@
             <div class="projectinfo fadeinright">
                 <h1 class="gradient">Itinerary Planner Webiste</h1>
                 <p>TRIP GURU is a website which generates the Itinerary plan of a particular place based on the user input, just the user need to give the name of the destination, starting date and ending date, based on the number of days it gives the plan, the plan is also divided into Day, Afternoon and Night. The Plan is Customizable and can be downloaded into pdf into any device.</p>
-                <button><i class='bx bx-link-external'></i> Link</button>
+                <a href="https://github.com/Pardhav1/Trip-Guru" target="_blank"><i class='bx bx-link-external'></i>Link</a>
             </div>
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills">
         <h1 class="sectiontitle autoDisplay">MY SKILLS</h1>
         <div class="skillsbox">
             <img class="skillsimg" src="videos/digital brain.png" alt="skills-png">
             <div class="designer autoDisplay">
                 <h1 class="gradient">Designer <i class='bx bx-laptop' ></i></h1>
-                <p>I have Expertise in HTML, CSS, JavaScript, and design tools like Figma and Adobe XD. My strength lies in aesthetics with functionality to create seamless user experiences.</p>
+                <p>I have Expertise in HTML, CSS, JavaScript and React. My strength lies in aesthetics with functionality to create seamless user experiences.</p>
             </div>
             <div class="coder autoDisplay">
                 <h1 class="gradient">Coder <i class='bx bx-code-block' ></i></h1>
@@ -145,26 +144,48 @@
         </div>
     </section>
 
-    <section class="Contact">
-        <h1 class="title autoDisplay">Lets Talk</h1>
+    <section id="Contact">
+        <h1 class="title">Lets Talk</h1>
         <div class="socialbox">
-            <a href="#"><i class='bx bxs-phone-call' ></i>91+ 7995847657</a>
-            <a href="#"><i class='bx bxl-whatsapp' ></i>Contact on Whatsapp</a>
-            <a href="#"><i class='bx bxl-linkedin-square'></i>Contact on linkedin</a>
+            <a href="https://wa.me/917995847657" target="_blank"><i class='bx bxl-whatsapp' ></i>Contact on Whatsapp</a>
+            <a href="https://www.linkedin.com/in/pardhava-someswar/" target="_blank"><i class='bx bxl-linkedin-square'></i>Contact on linkedin</a>
         </div>
 
-        <div class="contactbox">
-            <p>Whether you're looking to build a new website, improve your existing platform, or bring a unique project to file. I'm here to help.</p>
-            <p>Full Name</p>
-            <input type="text" placeholder="Your Full Name">
-            <p>Email Address</p>
-            <input type="email" placeholder="Your Email">
-            <p>Your Message</p>
-            <input class="inputmessage" type="text" placeholder="Share your thoughts here...">
-            <button><i class='bx bx-send' ></i>Send Message</button>
-        </div>
+            <form action="https://formsubmit.co/ypardhava1@gmail.com" method="POST" class="contactbox autoDisplay">
+    <p>Whether you're looking to build a new website, improve your existing platform, or bring a unique project to life. I'm here to help.</p>
+    
+    <p>Full Name</p>
+    <input type="text" name="name" placeholder="Your Full Name" required>
+
+    <p>Contact Number</p>
+    <input type="text"  name="contact" placeholder="Your Contact Number" required>
+
+    <p>Your Message</p>
+    <input class="inputmessage" type="text" name="message" placeholder="Share your thoughts here..." required>
+
+    <button type="submit"><i class='bx bx-send'></i>Send Message</button>
+</form>
     </section>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="app.js"></script>
+    <script>
+        document.querySelector("button").addEventListener("click", async()=>{
+            const name = document.querySelector('input[placeholder ="Your full name"]').value;
+            const contact = document.querySelector('input[placeholder = "Contact Number"]').value;
+            const message = document.querySelector('.inputmessage').value;
+
+            const res = await fetch("http://localhost:3001/send",{
+                method: "POST",
+                headers:{"Content-Type": "application/json"},
+                body:JSON.stringify({name,contact,message})
+            });
+
+            const result = await res.json();
+            alert(result.status);
+        })
+
+
+
+    </script>
 </body>
 </html>
